@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+            "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" >
+<script language="JavaScript">
+function point_it(event){
+    pos_x = event.offsetX?(event.offsetX):event.pageX-document.getElementById("pointer_div").offsetLeft;
+    pos_y = event.offsetY?(event.offsetY):event.pageY-document.getElementById("pointer_div").offsetTop;
+    document.getElementById("cross").style.left = (pos_x-1) ;
+    document.getElementById("cross").style.top = (pos_y-15) ;
+    document.getElementById("cross").style.visibility = "visible" ;
+    document.pointform.form_x.value = pos_x;
+    document.pointform.form_y.value = pos_y;
+}
+</script>
+</head>
+<body>
+<form name="pointform" action="insert.php" method="post">
+<table border="1">
+<tr BGCOLOR="#C0DCC0"><td>Etunimi: <input type="text" name="Etunimi">&nbsp;</td>
+<td>Sukunimi: <input type="text" name="Sukunimi">&nbsp;</td>
+<td>Ikä: <input type="text" name="Ika">&nbsp;</td>
+<td>Pituus: <input type="text" name="Pituus">&nbsp;</td>
+<td>Paino: <input type="text" name="Paino">&nbsp;</td></tr>
+<tr BGCOLOR="#E0ACE0">
+<td>Appearance:<br><input type="text" name="Appearance">&nbsp;</td>
+<td>Attack:<br><input type="text" name="Attack">&nbsp;</td>
+<td>Charisma:<br><input type="text" name="Charisma">&nbsp;</td>
+<td>Health_regeneration:<br><input type="text" name="Health_regeneration">&nbsp;</td>
+<td>Hp:<br><input type="text" name="Hp">&nbsp;</td></tr>
+<tr BGCOLOR="#E0ACE0">
+<td>Initiative:<br><input type="text" name="Initiative">&nbsp;</td>
+<td>Intelligence:<br><input type="text" name="Intelligence">&nbsp;</td>
+<td>Leadership:<br><input type="text" name="Leadership">&nbsp;</td>
+<td>Mana_Power:<br><input type="text" name="Mana_Power">&nbsp;</td>
+<td>Mana_regeneration:<br><input type="text" name="Mana_regeneration">&nbsp;</td></tr>
+<tr BGCOLOR="#E0ACE0">
+<td>Peacefully:<br><input type="text" name="Peacefully">&nbsp;</td>
+<td>Rage_multiply:<br><input type="text" name="Rage_multiply">&nbsp;</td>
+<td>Rage:<br><input type="text" name="Rage">&nbsp;</td>
+<td>Regeneration:<br><input type="text" name="Regeneration">&nbsp;</td>
+<td>Strength:<br><input type="text" name="Strength">&nbsp;</td></tr>
+<tr BGCOLOR="#E0ACE0">
+<td>Toughness:<br><input type="text" name="Toughness">&nbsp;</td>
+<td>Weapons Skill:<br><input type="text" name="WeaponsSkill">&nbsp;</td>
+<td>Wisdom:<br><input type="text" name="Wisdom">&nbsp;</td>
+<td>Wizard_Level:<br><input type="text" name="Wizard_Level">&nbsp;</td>
+<td>Wounds:<br><input type="text" name="Wounds">&nbsp;</td></tr>
+<tr BGCOLOR="#E07C70">
+<td>Hahmon numero:  <input type="text" name="Hahmon_numero">&nbsp;</td>
+<td>
+
+Pohj = <input type="text" name="form_x" size="3" /><br> Itaist = <input type="text" name="form_y" size="3" />
+</td>
+<td><Legend>Kartta:</Legend>
+<select name="Kartta">
+  <option value ="Pohjoisessa">Pohjoisessa</option>
+  <option value ="Keskellä">Keskellä</option>
+  <option value ="Etelässä">Etelässä</option>
+</select></td>
+<td><input type="Submit" VALUE="Tallenna"></td></tr>
+</table>
+<div id="pointer_div" onclick="point_it(event)" style = "background-image:url('./pic/mpr.jpg');width:400px;height:300px;">
+<img src="./pic/point.gif" id="cross" style="position:relative;visibility:hidden;z-index:2;"></div>
+</form>
+<hr>
+
+</body>
+</html>
