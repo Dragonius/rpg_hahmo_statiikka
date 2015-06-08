@@ -1,15 +1,15 @@
 <?php
 include 'mysql.php';
 
-mysql_connect(localhost,$username,$password);
+mysql_connect($host,$username,$password);
 mysql_select_db($database) or die( "Unable to select database");
 
-// Avaa stats paikka ja laske m‰‰r‰t sek‰ n‰yt‰ se
+// Avaa stats paikka ja laske m√§√§r√§t sek√§ n√§yt√§ se
 $query="SELECT * FROM rpg_stats";
 $result=mysql_query($query);
 $num=mysql_numrows($result);
 
-// Avaa kordinaatit paikka ja laske m‰‰r‰t sek‰ n‰yt‰ se
+// Avaa kordinaatit paikka ja laske m√§√§r√§t sek√§ n√§yt√§ se
 $query2="SELECT * FROM rpg_kordinaatit";
 $result2=mysql_query($query2);
 $num2=mysql_numrows($result2);
@@ -63,9 +63,9 @@ $W2 =  round( ($Hp / 10) + 1);
 
 
 
-echo "<table border='1'><tr BGCOLOR='#C0DCC0'><td>Etunimi: $First </td><td>Sukunimi: $Last </td><td>Ik‰: $Old </td><td>Pituus: $Height </td><td>Paino: $Weight </td></tr><tr BGCOLOR='#E0ACE0'><td>Appearance: $Appearance </td><td>Attack: $Attack </td><td>Charisma: $Charisma </td><td>Health_regeneration: $Health_regeneration </td><td>Hp: $Hp </td></tr><tr BGCOLOR='#E0ACE0'><td>Initiative: $Initiative </td><td>Intelligence: $Intelligence </td><td>Leadership: $Leadership </td><td>Mana_Power: $Mana_Power </td><td>Mana_regeneration: $Mana_regeneration </td></tr><tr BGCOLOR='#E0ACE0'><td>Peacefully: $Peacefully </td><td>Rage_multiply: $Rage_multiply </td><td>Rage: $Rage </td><td>Regeneratio: $Regeneration </td><td>Strength: $Strength </td></tr><tr BGCOLOR='#E0ACE0'><td>Toughness: $Toughness </td><td>Weapons Skill: $WeaponsSkill </td><td>Wisdom: $Wisdom </td><td>Wizard Level: $Wizard_Level </td><td>Wounds: $Wounds </td></tr>";
+echo "<table border='1'><tr BGCOLOR='#C0DCC0'><td>Etunimi: $First </td><td>Sukunimi: $Last </td><td>Ik√§: $Old </td><td>Pituus: $Height </td><td>Paino: $Weight </td></tr><tr BGCOLOR='#E0ACE0'><td>Appearance: $Appearance </td><td>Attack: $Attack </td><td>Charisma: $Charisma </td><td>Health_regeneration: $Health_regeneration </td><td>Hp: $Hp </td></tr><tr BGCOLOR='#E0ACE0'><td>Initiative: $Initiative </td><td>Intelligence: $Intelligence </td><td>Leadership: $Leadership </td><td>Mana_Power: $Mana_Power </td><td>Mana_regeneration: $Mana_regeneration </td></tr><tr BGCOLOR='#E0ACE0'><td>Peacefully: $Peacefully </td><td>Rage_multiply: $Rage_multiply </td><td>Rage: $Rage </td><td>Regeneratio: $Regeneration </td><td>Strength: $Strength </td></tr><tr BGCOLOR='#E0ACE0'><td>Toughness: $Toughness </td><td>Weapons Skill: $WeaponsSkill </td><td>Wisdom: $Wisdom </td><td>Wizard Level: $Wizard_Level </td><td>Wounds: $Wounds </td></tr>";
 
-echo "<tr BGCOLOR='#E07C70'><td>pohjoista: ", $Pohjoiskord,"</td><td> it‰ist‰: ",$itaistakord, "</td><td>Kartta:",$isokartta, "</td><td> Hahmon numero ",$Hahmon_numero,"</td></tr></table>";
+echo "<tr BGCOLOR='#E07C70'><td>pohjoista: ", $Pohjoiskord,"</td><td> it√§ist√§: ",$itaistakord, "</td><td>Kartta:",$isokartta, "</td><td> Hahmon numero ",$Hahmon_numero,"</td></tr></table>";
 
 echo "<table border='1'><tr><td><b>lasketut arvot:</b></td><td> Appearance: ",$AP2," </td><td> Health regeneration: ",$HR2," </td><td> HP: ",$HP2,"  </td><td> Mana regeneration: ",$MR2," </td><td> Rage multiply: ",$RM2," </td><td> Wizard Level: ",$WL2," </td><td> Wounds: ",$W2," </td></tr></table>";
 echo "<hr>";
