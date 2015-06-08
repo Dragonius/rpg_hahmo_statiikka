@@ -78,7 +78,7 @@ echo "Kordinaattien rivien m‰‰r‰ ", "$num2","<br>";
 
 <?php
 include 'mysql.php';
-mysql_connect(localhost,$username,$password);
+mysql_connect($host,$username,$password);
 mysql_select_db($database) or die( "Unable to select database");
 $queryprogress0="SELECT Rpg_kehitys FROM rpg_progress;";
 $rpg_progress0=mysql_query($queryprogress0);
