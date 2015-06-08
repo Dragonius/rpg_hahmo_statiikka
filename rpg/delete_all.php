@@ -2,7 +2,7 @@
 include 'mysql.php';
 
 
-mysql_connect(localhost,$username,$password);
+mysql_connect($host,$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 
 // Poista kaikki stats
