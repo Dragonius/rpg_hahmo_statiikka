@@ -9,20 +9,6 @@ SET time_zone = "+00:00";
 -- Database: `rpg`
 --
 
-DELIMITER $$
-
-
-INSERT INTO rpg_stats ( Etunimi, Sukunimi, Ika, Pituus, Paino, Appearance, Attack, Charisma, Health_regeneration, Hp, Initiative, Intelligence, Leadership, Mana_Power, Mana_regeneration, Peacefully, Rage_multiply, Rage, Regeneration, Strength, Toughness, WeaponsSkill, Wisdom, Wizard_Level, Wounds, Hahmon_numero) VALUES (9 + CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100),CEIL( RAND() * 100));
-INSERT INTO rpg_kordinaatit (Hahmon_numero, Pohjoista, Itaista, Kartta) VALUES (9 + CEIL( RAND() * 9),CEIL( RAND() * 100),CEIL( RAND() * 76),CEIL( RAND() * 80));
-set i=i+1;
-      if i=5 then
-        leave myloop;
-	end if;
-    end loop myloop;
-  end$$
-
-DELIMITER ;
-
 -- --------------------------------------------------------
 
 --
