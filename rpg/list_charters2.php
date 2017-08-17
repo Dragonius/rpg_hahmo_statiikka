@@ -4,7 +4,7 @@ include "mysql.php";
 mysql_connect($host,$username,$password);
 mysql_select_db($database) or die( "Unable to select database");
 
-// Avaa stats paikka ja laske m‰‰r‰t sek‰ n‰yt‰ se
+// Avaa stats paikka ja laske m√§√§r√§t sek√§ n√§yt√§ se
 $query="SELECT * FROM rpg_stats";
 $result=mysql_query($query);
 $num=mysql_numrows($result);
@@ -15,7 +15,7 @@ mysql_close();
 
 echo "<b><center>Database Charters Output</center></b><br><br>";
 echo "<hr>";
-echo "Hahmon etu , sukunimi, ik‰ , pituus , paino, hyˆkk‰ys , hp , Mana voima , voimakkuus, kest‰vyys , ‰lykkyys<br>";
+echo "Hahmon etu , sukunimi, ik√§ , pituus , paino, hy√∂kk√§ys , hp , Mana voima , voimakkuus, kest√§vyys , √§lykkyys<br>";
 echo "<table border=2 ><tr>";
 $i=0;
 $i2=0;
@@ -37,7 +37,7 @@ $Sukunimi=mysql_result($result,$i2,"sukunimi");
 echo "<td>Sukunimi: <input type='text' name='Sukunimi' value='$Sukunimi'> </td>";
 echo "</tr><tr BGCOLOR='#C0DCC0'>";
 $Ika=mysql_result($result,$i2,"ika");
-echo "<td>Ik‰: <input type='text' name='Ika' value='$Ika'> </td>";
+echo "<td>Ik√§: <input type='text' name='Ika' value='$Ika'> </td>";
 echo "</tr><tr BGCOLOR='#C0DCC0'>";
 $Pituus=mysql_result($result,$i2,"pituus");
 echo "<td>Pituus: <input type='text' name='Pituus' value='$Pituus'> </td>";
@@ -107,7 +107,7 @@ echo "<td>Wounds: <input type='text' name='Wounds' value='$Wounds'></td>";
 
 
 
-echo "</tr><tr><td><input type='Submit' name='$i2'VALUE='Tallenna'></form></td>";
+echo "</tr><tr><td><input type='Submit' name='$i2' VALUE='Tallenna'></form></td>";
 echo "</yd></tr></table>";
 echo "</td>";
 $i2++;
